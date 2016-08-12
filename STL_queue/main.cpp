@@ -7,9 +7,29 @@
 //
 
 #include <iostream>
+#include <queue>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+using namespace std;
+
+int main(int argc, const char * argv[])
+{
+    queue<int> queue1;
+    queue<int> queue2(queue1);
+
+    queue1.push(2);
+    queue1.push(4);
+    queue1.push(6);
+
+    cout << "队头元素为：" << queue1.front() << endl;
+    cout << "队尾元素为：" << queue1.back() << endl;
+
+    queue1.pop();
+
+    cout << "队头元素为：" << queue1.front() << endl;
+    cout << "队尾元素为：" << queue1.back() << endl;
+
+    cout << "队列的长度为：" << queue1.size() << endl;
+    cout << "队列是否为空：" << queue1.empty() << endl;
+
     return 0;
 }
